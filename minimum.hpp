@@ -4,7 +4,10 @@
 #include<vector>
 #include<functional>
 #include <cmath>
-
+//this is the base class
+//pure virtual class, the method update_alpha is pure virtual and will be defined 
+//in the direved class
+//the method gradiend descent can be ovverriden, (not in Armijo)
 class minimum {
     protected:
         using Fun = std :: function<double(const double&,const double&)>;

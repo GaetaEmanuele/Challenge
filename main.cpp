@@ -20,11 +20,13 @@ std::vector<double> Df(const double& x1, const double& x2){
         return res;
 }
 int main(int argc, char **argv){
+        //for using different choice of select alpha change choice
         data u;
         Alpha choice = Alpha::armijo;
         switch (choice)
         {
         case armijo:{
+                //f, Df are defined as free function, while the other datas are in the struct defined in data.h
                 Armijo a(f,Df,u.eps,u.tol,u.max_it,u.x0,u.alpha);
                 auto result = a.gradient_discent();
                 std::cout<<"This is Armijo method"<<std::endl;
