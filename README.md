@@ -5,8 +5,9 @@
 Muparser library *
 
 # Makefile
-* the make file has some instruction that are commented, becuse the defual version is used for compile and  run the version using free function. for using the second version you must do the followig instruction:
-1. in CPPFLAGS, there are 2 -I .. you have to cancel the # for the second path, and chage the second path with the path in you machine (the path to the Muparser library)
+* the make file has some instruction that are commented, becuse the defual version is used for compile and  run the version using free function. For both implementation it's necessary to change the name of the folder (on my PC the folder is called CHALLENGE while on github i have called it Challenge)
+For using the second version you must do the followig instruction:
+1. in CPPFLAGS line there are 2 -I one is commented and must be uncommented when you want to try to run the muParser version (and put your path to the library) 
 2. select as EXEC mainMuparser and comment the lain EXEC main
 3. erese the simbol of # near LDFLAGS and LIBS, and putting you path into LDFLAGS
 4. change LD_LIBRARY_PATH with your own path of the required library
