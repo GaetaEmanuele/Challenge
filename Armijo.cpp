@@ -1,7 +1,7 @@
 #include "Armijo.hpp"
 
 void Armijo :: update_alpha(){
-    double initial_alpha = alpha;
+    double alpha = alpha_0;
 
     for (std::size_t i = 0; i < max_it; ++i) {
         std::vector<double> gradient = Df(x0[0], x0[1]);
@@ -16,7 +16,7 @@ void Armijo :: update_alpha(){
     }
 
     // If max iterations reached, restore initial alpha
-    if (alpha == initial_alpha) {
-        alpha = initial_alpha;
+    if (alpha == alpha_0) {
+        alpha = alpha_0;
     }
 }
