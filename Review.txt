@@ -1,0 +1,39 @@
+You should keep your README and you Makefile a bit more simple. Overall, there is a bit of chaos.
+
+In the README.md:
+  - use sections to facilitate the reading of the user
+    -- have a compile section
+    -- a section where you describe briefly the aim of the code
+    -- a section where you describe how to run your code
+
+Please, usually review your delivery. Typos are not nice and hide the great dedication you gave to the challange :)
+
+Your Makefile is a bit chaotic.
+  - don't let commented parts like that. 
+    For instance, write:
+    CPPFLAGS ?= -O3 -Wall -I. -Wno-conversion-null -Wno-deprecated-declarations -I../${CHALLENGE_FOLDER}/include
+    # comments with why you need the other variable ....
+    #CPPFLAGS ?= -O3 -Wall -I. -Wno-conversion-null -Wno-deprecated-declarations -I../pacs-examples/Examples/include
+
+Write comments all in english please :)
+
+git:
+  add a .gitignore file to ignore the push of object files (*.o files) and swap files  (*.swp).
+  Keep your folder clean!
+
+
+Code Design:
+  I would have written the makefile to compile the two version of your code:
+  make freeFunctions
+  make muParserFunctions
+  to generate two different executables
+
+  Why do you have breaks in the main function? Simply return?
+  Why don't you pass directly the data object u to the constructor of each methods? It would have been easier to read :)
+
+There aren't many comments.....
+
+The code is overall well written and the implementation is nice :)
+
+
+
